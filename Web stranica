@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Monash Slav Society</title>
+<style>
+  /* Colour palette */
+  :root {
+    --blue: #005BBB;
+    --red: #EF4135;
+    --white: #FFFFFF;
+    --dark-text: #111111;
+  }
+
+  /* Reset & base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background: var(--white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  a {
+    text-decoration: none;
+    color: var(--blue);
+  }
+  a:hover {
+    color: var(--red);
+  }
+
+  /* Navbar */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--white);
+    border-bottom: 2px solid var(--blue);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  }
+  nav .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--blue);
+    letter-spacing: 0.08em;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+  }
+  nav ul li a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  nav ul li a:hover,
+  nav ul li a:focus {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  /* Hero Section */
+  header {
+    padding: 8rem 1.5rem 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--white) 40%, var(--red) 100%);
+    color: var(--white);
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 0.7rem 1.8rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 0.2);
+    text-transform: uppercase;
+  }
+  .btn-blue {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+  .btn-blue:hover {
+    background-color: #003b7a;
+  }
+  .btn-red {
+    background-color: var(--red);
+    color: var(--white);
+  }
+  .btn-red:hover {
+    background-color: #b93328;
+  }
+
+  /* Sections */
+  section {
+    max-width: 900px;
+    margin: 3rem auto 5rem;
+    padding: 0 1.5rem;
+  }
+  section h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--blue);
+    border-bottom: 3px solid var(--red);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+  }
+  ul.list {
+    list-style: disc inside;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  ul.list li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    user-select: none;
+  }
+  footer .flags {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section {
+      margin: 2rem 1rem 3rem;
+    }
+    nav ul {
+      gap: 1rem;
+    }
+    nav .logo {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MONASH SLAV SOCIETY</div>
+  <ul>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#what-we-do">What We Do</a></li>
+    <li><a href="#get-involved">Get Involved</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Hej Slaveni Monash-a!</h1>
+  <p>A home for all Slavs and Slav enthusiasts at Monash University.<br>
+     Celebrate the rich cultures, languages, and histories of the Slavic world.</p>
+  <div class="btn-group">
+    <a href="#get-involved" class="btn btn-blue" role="button">Join the Interest List</a>
+    <a href="https://instagram.com/monashslavsociety" target="_blank" rel="noopener" class="btn btn-red" role="button">Follow Us on Instagram</a>
+    <a href="#about" class="btn btn-blue" role="button">Learn More</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>The Monash Slav Society is an inclusive student club dedicated to the celebration and education of Slavic identity and culture.</p>
+  <p>Whether you come from Serbia, Slovakia, Russia, Poland, Ukraine, Bosnia, Croatia, Bulgaria, Czechia, Slovenia, Macedonia, Montenegro, or simply love Slavic heritage, you are welcome here.</p>
+  <p>Our mission is to build a strong, vibrant community where Slavic students and allies can connect, share, and grow.</p>
+</section>
+
+<section id="what-we-do">
+  <h2>What We Do</h2>
+  <ul class="list">
+    <li><strong>Events:</strong> Celebrate traditional Slavic holidays, music, food, and dance.</li>
+    <li><strong>Talks & Discussions:</strong> Explore Slavic history, politics, and languages through guest speakers and community forums.</li>
+    <li><strong>Language & Learning:</strong> Access resources and conversation groups to practice Slavic languages.</li>
+    <li><strong>Community:</strong> Connect with Slavs from across Monash and beyond, fostering friendships and solidarity.</li>
+  </ul>
+</section>
+
+<section id="get-involved">
+  <h2>Get Involved</h2>
+  <p>You don’t need to be fluent in a Slavic language or come from a Slavic country — passion and respect are what matter most.</p>
+  <ul class="list">
+    <li>📥 <a href="#" style="color: var(--blue); font-weight: 700;">Join the Interest List</a></li>
+    <li>📸 Follow us on Instagram: <a href="https://instagram.com/monashslavsociety" target="_blank" rel="noopener">@monashslavsociety</a></li>
+    <li>📧 Email: <a href="mailto:monashslavsociety@gmail.com">monashslavsociety@gmail.com</a></li>
+  </ul>
+  <p>Together, we shape a welcoming space for Slavic culture at Monash.</p>
+</section>
+
+<footer>
+  <div class="flags">🇷🇸 🇸🇰 🇵🇱 🇷🇺 🇧🇬 🇭🇷 🇨🇿 🇲🇰 🇲🇪 🇸🇮 🇧🇾</div>
+  Slava Slavenima.<br />
+  © 2025 Monash Slav Society | A non-profit student organisation
+</footer>
+
+</body>
+</html>
